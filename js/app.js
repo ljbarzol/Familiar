@@ -676,6 +676,7 @@
         FamiliarPWA.installApp().then(function () { renderConfig(); });
         return;
       }
+      if (e.target.id === "add-member") {
         if (S.data.miembros.length >= 6) return toast("Máximo 6 personas");
         overlay('<div class="sheet"><div class="sheet-head"><h3>Agregar persona</h3><button type="button" class="icon-btn" data-close>×</button></div>' +
           '<form class="form" id="add-m-form"><label>Nombre<input name="nombre" maxlength="24" required /></label><button class="btn primary" type="submit">Agregar</button></form></div>');
